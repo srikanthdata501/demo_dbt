@@ -1,1 +1,1 @@
-select cust_id as id from ML_WORKSHOP.PUBLIC.CUSTOMER_CHURN where state='AK';
+select RCDTS From  "RAMP"."GET_POC"."School_details" where "School Type" = 'HIGH SCHOOL' and "City" like '%Chicago%' 
