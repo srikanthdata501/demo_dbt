@@ -1007,3 +1007,82 @@ There are 1 unused configuration paths:
 2021-03-24 16:02:20.623322 (Thread-37): handling status request
 2021-03-24 16:02:20.623976 (Thread-37): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'f6b776e9-1222-405f-b426-45769340336b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad8bd7910>]}
 2021-03-24 16:02:20.625246 (Thread-37): sending response (<Response 877 bytes [200 OK]>) to 10.0.26.20
+2021-03-24 16:02:25.484060 (Thread-38): Parsing macros/adapters.sql
+2021-03-24 16:02:25.516669 (Thread-38): Parsing macros/catalog.sql
+2021-03-24 16:02:25.518936 (Thread-38): Parsing macros/materializations/table.sql
+2021-03-24 16:02:25.522922 (Thread-38): Parsing macros/materializations/merge.sql
+2021-03-24 16:02:25.525115 (Thread-38): Parsing macros/materializations/incremental.sql
+2021-03-24 16:02:25.536281 (Thread-38): Parsing macros/materializations/view.sql
+2021-03-24 16:02:25.540095 (Thread-38): Parsing macros/core.sql
+2021-03-24 16:02:25.545638 (Thread-38): Parsing macros/materializations/helpers.sql
+2021-03-24 16:02:25.555525 (Thread-38): Parsing macros/materializations/common/merge.sql
+2021-03-24 16:02:25.570697 (Thread-38): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-03-24 16:02:25.573307 (Thread-38): Parsing macros/materializations/snapshot/strategies.sql
+2021-03-24 16:02:25.595059 (Thread-38): Parsing macros/materializations/snapshot/snapshot.sql
+2021-03-24 16:02:25.638567 (Thread-38): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-03-24 16:02:25.644571 (Thread-38): Parsing macros/materializations/view/view.sql
+2021-03-24 16:02:25.655008 (Thread-38): Parsing macros/materializations/seed/seed.sql
+2021-03-24 16:02:25.691089 (Thread-38): Parsing macros/materializations/table/table.sql
+2021-03-24 16:02:25.702869 (Thread-38): Parsing macros/materializations/incremental/helpers.sql
+2021-03-24 16:02:25.705312 (Thread-38): Parsing macros/materializations/incremental/incremental.sql
+2021-03-24 16:02:25.714383 (Thread-38): Parsing macros/etc/is_incremental.sql
+2021-03-24 16:02:25.716572 (Thread-38): Parsing macros/etc/query.sql
+2021-03-24 16:02:25.717898 (Thread-38): Parsing macros/etc/datetime.sql
+2021-03-24 16:02:25.729550 (Thread-38): Parsing macros/etc/get_custom_alias.sql
+2021-03-24 16:02:25.731128 (Thread-38): Parsing macros/etc/get_custom_database.sql
+2021-03-24 16:02:25.734022 (Thread-38): Parsing macros/etc/get_custom_schema.sql
+2021-03-24 16:02:25.737434 (Thread-38): Parsing macros/schema_tests/not_null.sql
+2021-03-24 16:02:25.740068 (Thread-38): Parsing macros/schema_tests/accepted_values.sql
+2021-03-24 16:02:25.743876 (Thread-38): Parsing macros/schema_tests/relationships.sql
+2021-03-24 16:02:25.746275 (Thread-38): Parsing macros/schema_tests/unique.sql
+2021-03-24 16:02:25.748465 (Thread-38): Parsing macros/adapters/common.sql
+2021-03-24 16:02:26.018147 (Thread-38): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2021-03-24 16:02:26.268398 (Thread-39): handling status request
+2021-03-24 16:02:26.268845 (Thread-39): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'f6b776e9-1222-405f-b426-45769340336b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad82ac250>]}
+2021-03-24 16:02:26.273404 (Thread-39): sending response (<Response 8546 bytes [200 OK]>) to 10.0.42.11
+2021-03-24 16:08:50.507693 (Thread-40): handling status request
+2021-03-24 16:08:50.509879 (Thread-40): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'f6b776e9-1222-405f-b426-45769340336b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad84efdf0>]}
+2021-03-24 16:08:50.513145 (Thread-40): sending response (<Response 8546 bytes [200 OK]>) to 10.0.33.70
+2021-03-24 16:08:51.293380 (Thread-41): handling run_sql request
+2021-03-24 16:08:51.293799 (Thread-41): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'f6b776e9-1222-405f-b426-45769340336b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad82ac070>]}
+2021-03-24 16:08:52.413934 (Thread-41): sending response (<Response 138 bytes [200 OK]>) to 10.0.44.18
+2021-03-24 16:08:52.431194 (MainThread): Acquiring new snowflake connection "rpc.demo_dbt.request".
+2021-03-24 16:08:52.455916 (MainThread): dbt runtime exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/dbt/rpc/task_handler.py", line 94, in task_exec
+    result = self.task.handle_request()
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/rpc/sql_commands.py", line 162, in handle_request
+    node = self._get_exec_node()
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/rpc/sql_commands.py", line 123, in _get_exec_node
+    add_new_refs(
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/rpc/sql_commands.py", line 46, in add_new_refs
+    process_node(config, manifest, node)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/parser/manifest.py", line 731, in process_node
+    _process_refs_for_node(manifest, config.project_name, node)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/parser/manifest.py", line 626, in _process_refs_for_node
+    invalid_ref_fail_unless_test(
+  File "/usr/local/lib/python3.8/dist-packages/dbt/parser/manifest.py", line 383, in invalid_ref_fail_unless_test
+    ref_target_not_found(
+  File "/usr/local/lib/python3.8/dist-packages/dbt/exceptions.py", line 538, in ref_target_not_found
+    raise_compiler_error(msg, model)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/exceptions.py", line 407, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in rpc request (from remote system)
+  Rpc 'rpc.demo_dbt.request' (from remote system) depends on a node named 'my_first_dbt_model' which was not found
+2021-03-24 16:08:53.189997 (Thread-42): handling poll request
+2021-03-24 16:08:53.190477 (Thread-42): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'f6b776e9-1222-405f-b426-45769340336b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad8314310>]}
+2021-03-24 16:08:53.191752 (Thread-42): sending response (<Response 2870 bytes [200 OK]>) to 10.0.45.155
+2021-03-24 16:09:10.866003 (Thread-43): Got an acceptable cached parse result
+2021-03-24 16:09:11.045845 (Thread-43): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2021-03-24 16:09:11.478364 (Thread-44): handling status request
+2021-03-24 16:09:11.478828 (Thread-44): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'f6b776e9-1222-405f-b426-45769340336b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad8440dc0>]}
+2021-03-24 16:09:11.479819 (Thread-44): sending response (<Response 877 bytes [200 OK]>) to 10.0.6.15
+2021-03-24 16:09:28.527259 (Thread-45): handling status request
+2021-03-24 16:09:28.527698 (Thread-45): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'f6b776e9-1222-405f-b426-45769340336b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad829dd90>]}
+2021-03-24 16:09:28.528796 (Thread-45): sending response (<Response 877 bytes [200 OK]>) to 10.0.13.28

@@ -1,1 +1,5 @@
-select cust_id as id from ML_WORKSHOP.PUBLIC.CUSTOMER_CHURN where state='KS';
+-- Use the `ref` function to select from other models
+
+select *
+from {{ ref('my_first_dbt_model') }}
+where RCDTS = '70162060170001'
