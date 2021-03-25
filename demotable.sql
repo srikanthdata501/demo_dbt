@@ -1,1 +1,0 @@
-select ename,empno, sal from emp
